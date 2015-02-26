@@ -1,0 +1,23 @@
+{
+  "name": "nodebb-plugin-temporal-ban",
+  "version": "0.0.1",
+  "description": "This plugin allows to users for a determinated time",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segura2010/nodebb-plugin-temporal-ban"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "tagstitle",
+    "shell"
+  ],
+  "author": {
+    "name": "Alberto Segura",
+    "email": "alberto.segura.delgado@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/segura2010/nodebb-plugin-temporal-ban/issues"
+  }
+}

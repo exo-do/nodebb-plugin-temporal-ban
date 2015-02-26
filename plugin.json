@@ -1,0 +1,16 @@
+{
+	"id": "nodebb-plugin-temporal-ban",
+	"name": "Temporal Ban",
+	"description": "This plugin allows to users for a determinated time",
+	"url": "https://github.com/segura2010/nodebb-plugin-temporal-ban",
+	"library": "./library.js",
+
+	"hooks": [
+		{
+			"hook": "filter:users.get", "method": "getUser"
+		}
+	],
+	"scripts": [
+		"public/js/sockets.js"
+	]
+}
