@@ -8,6 +8,7 @@
 				if( document.URL.indexOf("/user") > -1 && $(".account-username") && app.user.isAdmin )
 				{	// Si estamos en el perfil de un usuario, ponemos los botones y demas
 					$(".account-username").append('<br><br><input type="date" id="banTime"><a href="#" class="btn btn-danger" onclick="banWithTime()">Ban</a>');
+					$("#banTime").datepicker();
 					infoBanTime();
 				}
 			}catch(e){
