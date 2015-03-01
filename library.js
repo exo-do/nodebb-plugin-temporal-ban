@@ -15,7 +15,7 @@ var temporalBan = {};
     { // If this user has been banned, i will check the ban time
       if(user[0].banTime < Date.now())
       {
-        User.setUserField(user[0].uid, "banned", 0);
+        User.unban(user[0].uid);
         user[0].banned = 0;
       }
     }
@@ -27,7 +27,7 @@ var temporalBan = {};
   // LLamadas por sockets
   SocketAdmins.banUser = function (socket, data, callback) {
     // Me pide banear
-    User.setUserField(data.uid, "banned", 1, function(err, r){
+    User.ban(data.uid, function(err, r){
       if(err)
       {
         callback(err, r);
