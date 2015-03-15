@@ -5,9 +5,9 @@
 	{
 		$(window).on('action:ajaxify.contentLoaded', function () {
 			try{
-				if( document.URL.indexOf("/user") > -1 && $(".account-username") && app.user.isAdmin )
+				if( document.URL.indexOf("/user") > -1 && $(".nav.nav-pills.account-sub-links") && app.user.isAdmin )
 				{	// Si estamos en el perfil de un usuario, ponemos los botones y demas
-					$(".account-username").append('<br><br><input type="date" id="banTime"><a href="#" class="btn btn-danger" onclick="banWithTime()">Ban</a>');
+					$(".nav.nav-pills.account-sub-links").append('<br><br><input type="text" style="color:black;" id="banTime"><a href="#" class="btn btn-danger" onclick="banWithTime()">Ban</a>');
 					$("#banTime").datepicker();
 					infoBanTime();
 				}

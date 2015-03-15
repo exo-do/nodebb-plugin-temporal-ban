@@ -12,5 +12,6 @@
 	],
 	"scripts": [
 		"public/js/sockets.js"
-	]
+	],
+	"minver": "0.7.0"
 }
