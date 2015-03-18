@@ -5,6 +5,7 @@ var Topic = module.parent.require('./topics');
 var db = module.parent.require('./database');
 var SocketAdmins = module.parent.require('./socket.io/admin');
 var SocketPlugins = module.parent.require('./socket.io/plugins');
+var Meta = module.parent.require('./meta');
 
 var temporalBan = {};
 
