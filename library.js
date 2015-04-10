@@ -6,6 +6,7 @@ var db = module.parent.require('./database');
 var SocketAdmins = module.parent.require('./socket.io/admin');
 var SocketPlugins = module.parent.require('./socket.io/plugins');
 var Meta = module.parent.require('./meta');
+var socket = module.parent.require('./socket.io');
 
 var temporalBan = {};
 
@@ -36,6 +37,7 @@ var temporalBan = {};
       else
       {
         User.setUserField(data.uid, "banTime", data.banTime, callback(err, r));
+        socket.in('uid_' + data.uid).emit('event:banned');
       }
     });
   };
