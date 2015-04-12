@@ -38,7 +38,7 @@
 		socket.emit('admin.infoBanTime', {uid:uid}, function(err, data){
 	        if(!err)
 	        {
-	        	if( data.banned )
+	        	if( data && data.banned )
 	        	{
 	        		var timeB = moment(data.banTime, "x");
 	        		$("#banTime").val(timeB.format("YYYY-MM-DD"));
